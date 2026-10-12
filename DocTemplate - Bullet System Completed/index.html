@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Montserrat:wght@400;500;600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Pacifico&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-light">
+  <div id="app" class="app-container">
+
+    <!-- ==========================================================================
+         VIEW 1: GOOGLE DOCS DASHBOARD / HOME SCREEN (docs.google.com/document/u/0/)
+         ========================================================================== -->
+    <div id="docs-dashboard-view" class="view-screen">
+      <!-- DASHBOARD TOP HEADER -->
+      <header class="dashboard-header">
+        <div class="db-header-left">
+          <button class="icon-circle-btn" title="Main menu">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          <div class="db-brand">
+            <svg class="docs-logo-icon" viewBox="0 0 36 36">
+              <path fill="#1a73e8" d="M22.5 4.5H7.5C6.4 4.5 5.5 5.4 5.5 6.5v23c0 1.1.9 2 2 2h21c1.1 0 2-.9 2-2V12L22.5 4.5z"/>
+              <path fill="#fff" d="M10.5 15.5h15v2.5h-15zm0 5h15v2.5h-15zm0 5h10v2.5h-10z"/>
+              <path fill="#1557b0" d="M22.5 4.5V12h7.5z"/>
+            </svg>
+            <span class="db-brand-text">Docs</span>
+          </div>
+        </div>
+
+        <!-- SEARCH BAR -->
+        <div class="db-search-bar">
+          <span class="material-symbols-outlined search-icon">search</span>
+          <input type="text" id="dash-search-input" placeholder="Search">
+        </div>
+
+        <div class="db-header-right">
+          <button class="upgrade-btn">Upgrade</button>
+          <button class="icon-circle-btn" title="Google apps">
+            <span class="material-symbols-outlined">apps</span>
+          </button>
+          <div class="user-avatar-circle" title="Google Account">
+            <span>R</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- DASHBOARD BODY CONTENT -->
+      <main class="dashboard-body">
+        <!-- TEMPLATE GALLERY SECTION -->
+        <section class="template-gallery-section">
+          <div class="section-container">
+            <div class="section-header-row">
+              <span class="section-heading">Start a new document</span>
+              <div class="gallery-controls">
+                <button class="gallery-toggle-btn">Template gallery <span class="material-symbols-outlined">unfold_more</span></button>
+                <button class="icon-sm-btn"><span class="material-symbols-outlined">more_vert</span></button>
+              </div>
+            </div>
+
+            <!-- TEMPLATE CARDS SCROLL -->
+            <div class="template-cards-grid">
+              <!-- BLANK DOCUMENT CARD WITH MULTICOLOR PLUS -->
+              <div class="tmpl-card" data-template="blank">
+                <div class="tmpl-preview blank-preview">
+                  <svg class="google-plus-icon" viewBox="0 0 36 36">
+                    <path fill="#4285F4" d="M16 6h4v24h-4z"/>
+                    <path fill="#EA4335" d="M6 16h24v4H6z"/>
+                    <path fill="#FBBC05" d="M16 6h4v10h-4z"/>
+                    <path fill="#34A853" d="M20 16h10v4H20z"/>
+                  </svg>
+                </div>
+                <span class="tmpl-title">Blank document</span>
+              </div>
+
+              <div class="tmpl-card" data-template="brochure">
+                <div class="tmpl-preview brochure-preview">
+                  <div class="tp-banner geometric"></div>
+                  <div class="tp-line title">Product Brochure</div>
+                  <div class="tp-line">Geometric design</div>
+                </div>
+                <span class="tmpl-title">Brochure</span>
+                <span class="tmpl-sub">Geometric</span>
+              </div>
+
+              <div class="tmpl-card" data-template="resume">
+                <div class="tmpl-preview resume-preview">
+                  <div class="tp-line title">Your Name</div>
+                  <div class="tp-line">Resume Serif</div>
+                  <div class="tp-block"></div>
+                </div>
+                <span class="tmpl-title">Resume</span>
+                <span class="tmpl-sub">Serif</span>
+              </div>
+
+              <div class="tmpl-card" data-template="resume_coral">
+                <div class="tmpl-preview coral-preview">
+                  <div class="tp-banner coral"></div>
+                  <div class="tp-line title">Your Name</div>
+                  <div class="tp-line">Resume Coral</div>
+                </div>
+                <span class="tmpl-title">Resume</span>
+                <span class="tmpl-sub">Coral</span>
+              </div>
+
+              <div class="tmpl-card" data-template="letter">
+                <div class="tmpl-preview letter-preview">
+                  <div class="tp-banner spearmint"></div>
+                  <div class="tp-line title">Letter</div>
+                  <div class="tp-line">Spearmint</div>
+                </div>
+                <span class="tmpl-title">Letter</span>
+                <span class="tmpl-sub">Spearmint</span>
+              </div>
+
+              <div class="tmpl-card" data-template="proposal">
+                <div class="tmpl-preview proposal-preview">
+                  <div class="tp-banner tropic"></div>
+                  <div class="tp-line title">Project proposal</div>
+                  <div class="tp-line">Tropic</div>
+                </div>
+                <span class="tmpl-title">Project proposal</span>
+                <span class="tmpl-sub">Tropic</span>
+              </div>
+
+              <div class="tmpl-card" data-template="report">
+                <div class="tmpl-preview report-preview">
+                  <div class="tp-banner luxe"></div>
+                  <div class="tp-line title">Report</div>
+                  <div class="tp-line">Luxe</div>
+                </div>
+                <span class="tmpl-title">Report</span>
+                <span class="tmpl-sub">Luxe</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RECENT DOCUMENTS SECTION -->
+        <section class="recent-docs-section">
+          <div class="section-container">
+            <div class="recent-header-row">
+              <span class="recent-heading">Recent documents</span>
+
+              <div class="recent-filter-bar">
+                <select id="doc-owner-filter" class="filter-select">
+                  <option value="anyone">Owned by anyone</option>
+                  <option value="me">Owned by me</option>
+                  <option value="notme">Not owned by me</option>
+                </select>
+
+                <button class="icon-sm-btn" id="btn-toggle-grid-list" title="View options">
+                  <span class="material-symbols-outlined">grid_view</span>
+                </button>
+                <button class="icon-sm-btn" title="Sort options">
+                  <span class="material-symbols-outlined">sort_by_alpha</span>
+                </button>
+                <button class="icon-sm-btn" title="Open file picker">
+                  <span class="material-symbols-outlined">folder_open</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- DOCUMENTS GRID CONTAINER -->
+            <div class="docs-grid" id="dash-docs-grid">
+              <!-- Empty state default -->
+              <div class="empty-docs-box">
+                <span class="material-symbols-outlined empty-icon">article</span>
+                <h3>No text documents yet</h3>
+                <p>Select a blank document or choose another template above to get started</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- ==========================================================================
+         VIEW 2: DOCUMENT EDITOR SCREEN
+         ========================================================================== -->
+    <div id="doc-editor-view" class="view-screen" style="display:none;">
+      <!-- TOP HEADER NAVBAR -->
+      <header class="top-header">
+        <div class="header-left">
+          <button class="logo-btn" id="btn-back-to-dash" title="Docs Home">
+            <svg class="docs-logo-icon" viewBox="0 0 36 36">
+              <path fill="#1a73e8" d="M22.5 4.5H7.5C6.4 4.5 5.5 5.4 5.5 6.5v23c0 1.1.9 2 2 2h21c1.1 0 2-.9 2-2V12L22.5 4.5z"/>
+              <path fill="#fff" d="M10.5 15.5h15v2.5h-15zm0 5h15v2.5h-15zm0 5h10v2.5h-10z"/>
+              <path fill="#1557b0" d="M22.5 4.5V12h7.5z"/>
+            </svg>
+          </button>
+          <div class="doc-meta">
+            <div class="doc-title-row">
+              <input type="text" id="doc-title-input" value="Untitled document" aria-label="Document Title" autocomplete="off">
+              <button class="star-btn" id="btn-star-doc" title="Star document">
+                <span class="material-symbols-outlined">star_rate</span>
+              </button>
+              <div class="save-status" id="save-status">
+                <span class="material-symbols-outlined status-icon">cloud_done</span>
+                <span class="status-text">Saved to Drive</span>
+              </div>
+            </div>
+
+            <!-- MENUBAR -->
+            <nav class="menu-bar" role="menubar">
+              <div class="menu-item" data-menu="file">
+                <span>File</span>
+                <div class="dropdown-menu" id="menu-file">
+                  <button class="menu-option" id="menu-new-doc"><span class="material-symbols-outlined">add_box</span>New document</button>
+                  <button class="menu-option" id="menu-open-docs"><span class="material-symbols-outlined">folder_open</span>Docs Home...</button>
+                  <button class="menu-option" id="menu-templates"><span class="material-symbols-outlined">dashboard</span>From template gallery...</button>
+                  <button class="menu-option" id="menu-make-copy"><span class="material-symbols-outlined">content_copy</span>Make a copy</button>
+                  <div class="menu-divider"></div>
+                  <div class="menu-option has-submenu">
+                    <span><span class="material-symbols-outlined">download</span>Download</span>
+                    <span class="material-symbols-outlined submenu-arrow">chevron_right</span>
+                    <div class="submenu">
+                      <button class="menu-option" id="export-pdf"><span class="material-symbols-outlined">picture_as_pdf</span>PDF Document (.pdf)</button>
+                      <button class="menu-option" id="export-docx"><span class="material-symbols-outlined">description</span>Microsoft Word (.docx)</button>
+                      <button class="menu-option" id="export-txt"><span class="material-symbols-outlined">article</span>Plain Text (.txt)</button>
+                      <button class="menu-option" id="export-html"><span class="material-symbols-outlined">code</span>Web Page (.html)</button>
+                      <button class="menu-option" id="export-md"><span class="material-symbols-outlined">markdown</span>Markdown (.md)</button>
+                    </div>
+                  </div>
+                  <button class="menu-option" id="menu-version-history"><span class="material-symbols-outlined">history</span>Version history</button>
+                  <button class="menu-option" id="menu-rename"><span class="material-symbols-outlined">drive_file_rename_outline</span>Rename</button>
+                  <div class="menu-divider"></div>
+                  <button class="menu-option" id="menu-page-setup"><span class="material-symbols-outlined">note_add</span>Page setup</button>
+                  <button class="menu-option" id="menu-print"><span class="material-symbols-outlined">print</span>Print <span class="shortcut">Ctrl+P</span></button>
+                </div>
+              </div>
+
+              <div class="menu-item" data-menu="edit">
+                <span>Edit</span>
+                <div class="dropdown-menu" id="menu-edit">
+                  <button class="menu-option" id="edit-undo"><span class="material-symbols-outlined">undo</span>Undo <span class="shortcut">Ctrl+Z</span></button>
+                  <button class="menu-option" id="edit-redo"><span class="material-symbols-outlined">redo</span>Redo <span class="shortcut">Ctrl+Y</span></button>
+                  <div class="menu-divider"></div>
+                  <button class="menu-option" id="edit-cut"><span class="material-symbols-outlined">content_cut</span>Cut <span class="shortcut">Ctrl+X</span></button>
+                  <button class="menu-option" id="edit-copy"><span class="material-symbols-outlined">content_copy</span>Copy <span class="shortcut">Ctrl+C</span></button>
+                  <button class="menu-option" id="edit-paste"><span class="material-symbols-outlined">content_paste</span>Paste <span class="shortcut">Ctrl+V</span></button>
+                  <button class="menu-option" id="edit-select-all"><span class="material-symbols-outlined">select_all</span>Select all <span class="shortcut">Ctrl+A</span></button>
+                  <div class="menu-divider"></div>
+                  <button class="menu-option" id="edit-find-replace"><span class="material-symbols-outlined">find_replace</span>Find and replace <span class="shortcut">Ctrl+H</span></button>
+                </div>
+              </div>
+
+              <div class="menu-item" data-menu="view">
+                <span>View</span>
+                <div class="dropdown-menu" id="menu-view">
+                  <div class="menu-option has-submenu">
+                    <span><span class="material-symbols-outlined">edit_note</span>Mode</span>
+                    <span class="material-symbols-outlined submenu-arrow">chevron_right</span>
+                    <div class="submenu">
+                      <button class="menu-option active-check" id="mode-editing"><span class="material-symbols-outlined check-icon">check</span>Editing</button>
+                      <button class="menu-option" id="mode-suggesting"><span class="material-symbols-outlined check-icon"></span>Suggesting</button>
+                      <button class="menu-option" id="mode-viewing"><span class="material-symbols-outlined check-icon"></span>Viewing</button>
+                    </div>
+                  </div>
+                  <div class="menu-divider"></div>
+                  <button class="menu-option" id="toggle-ruler-menu"><span class="material-symbols-outlined check-icon">check</span>Show ruler</button>
+                  <button class="menu-option" id="toggle-outline-menu"><span class="material-symbols-outlined check-icon">check</span>Show outline</button>
+                  <button class="menu-option" id="toggle-dark-mode"><span class="material-symbols-outlined">dark_mode</span>Dark theme</button>
+                  <button class="menu-option" id="menu-fullscreen"><span class="material-symbols-outlined">fullscreen</span>Full screen</button>
+                </div>
+              </div>
+
+              <div class="menu-item" data-menu="insert">
+                <span>Insert</span>
+                <div class="dropdown-menu" id="menu-insert">
+                  <button class="menu-option" id="insert-image-btn"><span class="material-symbols-outlined">image</span>Image...</button>
+                  <button class="menu-option" id="insert-table-btn"><span class="material-symbols-outlined">grid_on</span>Table</button>
+                  <button class="menu-option" id="insert-drawing-btn"><span class="material-symbols-outlined">draw</span>Drawing...</button>
+                  <div class="menu-divider"></div>
+                  <button class="menu-option" id="insert-link-btn"><span class="material-symbols-outlined">link</span>Link <span class="shortcut">Ctrl+K</span></button>
+                  <button class="menu-option" id="insert-comment-btn"><span class="material-symbols-outlined">add_comment</span>Comment <span class="shortcut">Ctrl+Alt+M</span></button>
+                  <button class="menu-option" id="insert-hr-btn"><span class="material-symbols-outlined">horizontal_rule</span>Horizontal line</button>
+                  <div class="menu-divider"></div>
+                  <button class="menu-option" id="insert-header-btn"><span class="material-symbols-outlined">vertical_align_top</span>Header & Footer</button>
+                  <button class="menu-option" id="insert-page-break-btn"><span class="material-symbols-outlined">insert_page_break</span>Page break <span class="shortcut">Ctrl+Enter</span></button>
+                  <button class="menu-option" id="insert-date-btn"><span class="material-symbols-outlined">today</span>Date</button>
+                  <button class="menu-option" id="insert-codeblock-btn"><span class="material-symbols-outlined">code</span>Code block</button>
+                </div>
+              </div>
+
+              <div class="menu-item" data-menu="format">
+                <span>Format</span>
+                <div class="dropdown-menu" id="menu-format">
+                  <div class="menu-option has-submenu">
+                    <span><span class="material-symbols-outlined">format_bold</span>Text</span>
+                    <span class="material-symbols-outlined submenu-arrow">chevron_right</span>
+                    <div class="submenu">
+                      <button class="menu-option" id="fmt-bold"><span class="material-symbols-outlined">format_bold</span>Bold <span class="shortcut">Ctrl+B</span></button>
+                      <button class="menu-option" id="fmt-italic"><span class="material-symbols-outlined">format_italic</span>Italic <span class="shortcut">Ctrl+I</span></button>
+                      <button class="menu-option" id="fmt-underline"><span class="material-symbols-outlined">format_underlined</span>Underline <span class="shortcut">Ctrl+U</span></button>
+                      <button class="menu-option" id="fmt-strikethrough"><span class="material-symbols-outlined">strikethrough_s</span>Strikethrough</button>
+                    </div>
+                  </div>
+                  <div class="menu-option has-submenu">
+                    <span><span class="material-symbols-outlined">title</span>Paragraph styles</span>
+                    <span class="material-symbols-outlined submenu-arrow">chevron_right</span>
+                    <div class="submenu">
+                      <button class="menu-option" id="fmt-style-normal">Normal text</button>
+                      <button class="menu-option" id="fmt-style-title">Title</button>
+                      <button class="menu-option" id="fmt-style-subtitle">Subtitle</button>
+                      <button class="menu-option" id="fmt-style-h1">Heading 1</button>
+                      <button class="menu-option" id="fmt-style-h2">Heading 2</button>
+                      <button class="menu-option" id="fmt-style-h3">Heading 3</button>
+                    </div>
+                  </div>
+                  <button class="menu-option" id="fmt-clear"><span class="material-symbols-outlined">format_clear</span>Clear formatting <span class="shortcut">Ctrl+\</span></button>
+                </div>
+              </div>
+
+              <div class="menu-item" data-menu="tools">
+                <span>Tools</span>
+                <div class="dropdown-menu" id="menu-tools">
+                  <button class="menu-option" id="tool-word-count"><span class="material-symbols-outlined">spellcheck</span>Word count <span class="shortcut">Ctrl+Shift+C</span></button>
+                  <button class="menu-option" id="tool-ai-assistant"><span class="material-symbols-outlined">auto_awesome</span>Help me write (Gemini)</button>
+                  <button class="menu-option" id="tool-voice-typing"><span class="material-symbols-outlined">mic</span>Voice typing <span class="shortcut">Ctrl+Shift+S</span></button>
+                  <div class="menu-divider"></div>
+                  <button class="menu-option" id="tool-shortcuts"><span class="material-symbols-outlined">keyboard</span>Keyboard shortcuts</button>
+                </div>
+              </div>
+
+              <div class="menu-item" data-menu="help">
+                <span>Help</span>
+                <div class="dropdown-menu" id="menu-help">
+                  <button class="menu-option" id="help-search-menu"><span class="material-symbols-outlined">search</span>Search the menus <span class="shortcut">Alt+/</span></button>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <!-- RIGHT HEADER ACTIONS -->
+        <div class="header-right">
+          <button class="icon-circle-btn" id="btn-toggle-comments" title="Open Comment Thread">
+            <span class="material-symbols-outlined">comment</span>
+            <span class="badge" id="comments-count-badge" style="display:none;">0</span>
+          </button>
+
+          <button class="icon-circle-btn" id="btn-ai-spark" title="Gemini AI Assistant">
+            <span class="material-symbols-outlined ai-gradient-icon">auto_awesome</span>
+          </button>
+
+          <button class="share-btn" id="btn-share-doc">
+            <span class="material-symbols-outlined lock-icon">lock</span>
+            <span>Share</span>
+          </button>
+
+          <div class="user-avatar-circle" title="Account profile">
+            <span>R</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- TOOLBAR BAR -->
+      <div class="toolbar-container" id="toolbar">
+        <div class="toolbar-group">
+          <button class="tb-btn" id="tb-undo" title="Undo (Ctrl+Z)"><span class="material-symbols-outlined">undo</span></button>
+          <button class="tb-btn" id="tb-redo" title="Redo (Ctrl+Y)"><span class="material-symbols-outlined">redo</span></button>
+          <button class="tb-btn" id="tb-print" title="Print (Ctrl+P)"><span class="material-symbols-outlined">print</span></button>
+          <button class="tb-btn" id="tb-paint-format" title="Paint format"><span class="material-symbols-outlined">imagesearch_roller</span></button>
+        </div>
+
+        <div class="toolbar-divider"></div>
+
+        <div class="toolbar-group">
+          <select class="tb-select" id="tb-zoom-select" title="Zoom">
+            <option value="50">50%</option>
+            <option value="75">75%</option>
+            <option value="90">90%</option>
+            <option value="100" selected>100%</option>
+            <option value="125">125%</option>
+            <option value="150">150%</option>
+            <option value="200">200%</option>
+          </select>
+        </div>
+
+        <div class="toolbar-divider"></div>
+
+        <div class="toolbar-group">
+          <select class="tb-select" id="tb-style-select" title="Styles">
+            <option value="p">Normal text</option>
+            <option value="h1">Title</option>
+            <option value="h2">Subtitle</option>
+            <option value="h3">Heading 1</option>
+            <option value="h4">Heading 2</option>
+            <option value="h5">Heading 3</option>
+          </select>
+
+          <select class="tb-select font-family-select" id="tb-font-select" title="Font family">
+            <option value="Arial" selected>Arial</option>
+            <option value="Roboto">Roboto</option>
+            <option value="Inter">Inter</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Merriweather">Merriweather</option>
+            <option value="Courier Prime">Courier Prime</option>
+            <option value="Montserrat">Montserrat</option>
+            <option value="Playfair Display">Playfair Display</option>
+          </select>
+
+          <!-- FONT SIZE DROPDOWN PICKER -->
+          <select class="tb-select font-size-select" id="tb-font-size-select" title="Font size">
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11" selected>11</option>
+            <option value="12">12</option>
+            <option value="14">14</option>
+            <option value="18">18</option>
+            <option value="24">24</option>
+            <option value="30">30</option>
+            <option value="36">36</option>
+            <option value="48">48</option>
+            <option value="60">60</option>
+            <option value="72">72</option>
+            <option value="96">96</option>
+          </select>
+        </div>
+
+        <div class="toolbar-divider"></div>
+
+        <div class="toolbar-group">
+          <button class="tb-btn" id="tb-bold" title="Bold (Ctrl+B)"><span class="material-symbols-outlined">format_bold</span></button>
+          <button class="tb-btn" id="tb-italic" title="Italic (Ctrl+I)"><span class="material-symbols-outlined">format_italic</span></button>
+          <button class="tb-btn" id="tb-underline" title="Underline (Ctrl+U)"><span class="material-symbols-outlined">format_underlined</span></button>
+          
+          <div class="color-picker-wrapper" title="Text color">
+            <button class="tb-btn" id="tb-text-color-btn">
+              <span class="material-symbols-outlined">format_color_text</span>
+              <span class="color-bar" id="text-color-indicator" style="background-color: #000000;"></span>
+            </button>
+            <input type="color" id="tb-text-color-picker" value="#000000">
+          </div>
+
+          <div class="color-picker-wrapper" title="Highlight color">
+            <button class="tb-btn" id="tb-bg-color-btn">
+              <span class="material-symbols-outlined">ink_highlighter</span>
+              <span class="color-bar" id="bg-color-indicator" style="background-color: #ffff00;"></span>
+            </button>
+            <input type="color" id="tb-bg-color-picker" value="#ffff00">
+          </div>
+        </div>
+
+        <div class="toolbar-divider"></div>
+
+        <div class="toolbar-group">
+          <button class="tb-btn" id="tb-insert-link" title="Insert link (Ctrl+K)"><span class="material-symbols-outlined">link</span></button>
+          <button class="tb-btn" id="tb-add-comment" title="Add comment (Ctrl+Alt+M)"><span class="material-symbols-outlined">add_comment</span></button>
+          <button class="tb-btn" id="tb-insert-image" title="Insert image"><span class="material-symbols-outlined">image</span></button>
+        </div>
+
+        <div class="toolbar-divider"></div>
+
+        <div class="toolbar-group">
+          <button class="tb-btn" id="tb-align-left" title="Left align"><span class="material-symbols-outlined">format_align_left</span></button>
+          <button class="tb-btn" id="tb-align-center" title="Center align"><span class="material-symbols-outlined">format_align_center</span></button>
+          <button class="tb-btn" id="tb-align-right" title="Right align"><span class="material-symbols-outlined">format_align_right</span></button>
+          <button class="tb-btn" id="tb-align-justify" title="Justify"><span class="material-symbols-outlined">format_align_justify</span></button>
+        </div>
+
+        <div class="toolbar-divider"></div>
+
+        <div class="toolbar-group">
+          <button class="tb-btn" id="tb-checklist" title="Checklist"><span class="material-symbols-outlined">checklist</span></button>
+          <button class="tb-btn" id="tb-bullet-list" title="Bulleted list"><span class="material-symbols-outlined">format_list_bulleted</span></button>
+          <button class="tb-btn" id="tb-number-list" title="Numbered list"><span class="material-symbols-outlined">format_list_numbered</span></button>
+          <button class="tb-btn" id="tb-outdent" title="Decrease indent"><span class="material-symbols-outlined">format_indent_decrease</span></button>
+          <button class="tb-btn" id="tb-indent" title="Increase indent"><span class="material-symbols-outlined">format_indent_increase</span></button>
+          <button class="tb-btn" id="tb-clear-fmt" title="Clear formatting"><span class="material-symbols-outlined">format_clear</span></button>
+        </div>
+
+        <div class="toolbar-spacer"></div>
+
+        <div class="toolbar-group mode-selector-group">
+          <div class="mode-dropdown-wrapper">
+            <button class="mode-btn" id="tb-mode-btn" title="Editing Mode">
+              <span class="material-symbols-outlined mode-icon" id="mode-icon-current">edit</span>
+              <span class="mode-label" id="mode-label-current">Editing</span>
+              <span class="material-symbols-outlined arrow">arrow_drop_down</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN BODY SECTION -->
+      <div class="main-layout">
+        <!-- LEFT SIDEBAR: OUTLINE -->
+        <aside class="left-sidebar" id="left-sidebar">
+          <div class="sidebar-header">
+            <span class="sidebar-title">Outline</span>
+            <button class="icon-sm-btn" id="btn-close-left-sidebar" title="Close outline">
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+          </div>
+          <div class="sidebar-content">
+            <div class="summary-section">
+              <div class="section-label">Summary</div>
+              <textarea id="doc-summary-input" placeholder="Add a document summary..."></textarea>
+            </div>
+
+            <div class="outline-section">
+              <div class="section-label">Headings</div>
+              <ul id="outline-list" class="outline-list">
+                <li class="empty-outline">Headings you add to the document will appear here.</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+        <button class="toggle-sidebar-trigger" id="btn-open-left-sidebar" title="Show document outline">
+          <span class="material-symbols-outlined">format_list_bulleted</span>
+        </button>
+
+        <!-- CENTER CONTENT AREA WITH RULER AND MULTI-PAGE CANVAS -->
+        <main class="editor-viewport" id="editor-viewport">
+          <!-- RULER -->
+          <div class="ruler-container" id="ruler-container">
+            <div class="ruler-body" id="ruler-body">
+              <div class="ruler-margin left-margin" id="ruler-left-margin"></div>
+              <div class="ruler-ticks-wrapper" id="ruler-ticks"></div>
+              <div class="ruler-marker first-line-indent" id="marker-first-indent" title="First Line Indent"></div>
+              <div class="ruler-marker left-indent" id="marker-left-indent" title="Left Indent"></div>
+              <div class="ruler-marker right-indent" id="marker-right-indent" title="Right Indent"></div>
+              <div class="ruler-margin right-margin" id="ruler-right-margin"></div>
+            </div>
+          </div>
+
+          <!-- DOCUMENT WORKSPACE CONTAINER (MULTIPLE PAGES AUTOMATICALLY GENERATED) -->
+          <div class="document-workspace" id="document-workspace">
+            <div class="pages-wrapper" id="pages-wrapper">
+              <!-- PAGE 1 -->
+              <div class="doc-page" id="doc-page-1">
+                <div class="page-header-zone" contenteditable="true" data-placeholder="Header text..."></div>
+                
+                <div class="editor-canvas" id="editor" contenteditable="true" spellcheck="true">
+                  <h1>Welcome to DocsPro</h1>
+                  <p>DocsPro is a feature-rich, high-performance web clone of <strong>Google Docs</strong> designed with a vibrant, modern Material Design interface.</p>
+                  
+                  <h2>Key Features</h2>
+                  <ul>
+                    <li><strong>Rich Text Formatting:</strong> Full control over typography, colors, line spacing, lists, alignments, and text styles.</li>
+                    <li><strong>Interactive Ruler:</strong> Drag markers for first-line indent, left indent, and right margin alignment.</li>
+                    <li><strong>Comments & Suggesting Mode:</strong> Highlight any text to add comment threads or switch to suggest mode to track edits.</li>
+                    <li><strong>Document Outline & Summary:</strong> Live heading navigation dynamically generated in the side panel.</li>
+                    <li><strong>AI Assistant (Gemini):</strong> Click the AI spark icon to draft, summarize, translate, or rewrite text instantly!</li>
+                  </ul>
+                </div>
+
+                <div class="page-footer-zone">
+                  <span class="footer-text" contenteditable="true" data-placeholder="Footer text...">DocsPro Document</span>
+                  <span class="page-number-display">Page 1</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <!-- RIGHT SIDEBAR: COMMENTS -->
+        <aside class="right-sidebar" id="right-sidebar">
+          <div class="right-sidebar-header">
+            <span class="sidebar-title" id="right-sidebar-title">Comments</span>
+            <button class="icon-sm-btn" id="btn-close-right-sidebar">
+              <span class="material-symbols-outlined">close</span>
+            </button>
+          </div>
+          <div class="right-sidebar-content" id="right-sidebar-content">
+            <div id="comments-container" class="comments-list">
+              <div class="empty-comments-state">
+                <span class="material-symbols-outlined">add_comment</span>
+                <p>No comments yet</p>
+                <span>Highlight text and press <strong>Ctrl+Alt+M</strong> or click the comment button to add a comment.</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- COMPANION STRIP -->
+        <aside class="companion-strip">
+          <button class="companion-btn active" id="companion-ai" title="Gemini AI Assistant">
+            <span class="material-symbols-outlined ai-sparkle">auto_awesome</span>
+          </button>
+          <button class="companion-btn" id="companion-comments" title="Comments">
+            <span class="material-symbols-outlined">comment</span>
+          </button>
+          <button class="companion-btn" id="companion-history" title="Version History">
+            <span class="material-symbols-outlined">history</span>
+          </button>
+        </aside>
+      </div>
+
+      <!-- BOTTOM STATUS BAR -->
+      <footer class="bottom-status-bar">
+        <div class="status-left">
+          <span id="stat-word-count">Page 1 of 1 &nbsp;•&nbsp; 78 words &nbsp;•&nbsp; 542 characters</span>
+        </div>
+        <div class="status-right">
+          <button class="status-link-btn" id="btn-open-wordcount-modal">Details</button>
+          <span class="status-sep">|</span>
+          <button class="status-link-btn" id="btn-shortcuts-hint">Shortcuts (Ctrl+/)</button>
+        </div>
+      </footer>
+    </div>
+
+    <!-- MODALS & DIALOGS -->
+    <div class="modal-overlay" id="modal-share">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3><span class="material-symbols-outlined">lock</span> Share "<span>Untitled document</span>"</h3>
+          <button class="icon-sm-btn modal-close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="share-input-group">
+            <label>Add people and groups</label>
+            <div class="share-field">
+              <input type="email" id="share-email-input" placeholder="Enter email address...">
+              <select id="share-permission-select">
+                <option value="editor">Editor</option>
+                <option value="commenter">Commenter</option>
+                <option value="viewer">Viewer</option>
+              </select>
+              <button class="btn btn-primary" id="btn-send-invite">Send</button>
+            </div>
+          </div>
+          <div class="share-access-info">
+            <h4>General Access</h4>
+            <div class="access-row">
+              <span class="material-symbols-outlined access-icon">public</span>
+              <div class="access-desc">
+                <strong>Anyone with the link</strong>
+                <span>Anyone on the internet with this link can view</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" id="btn-copy-link"><span class="material-symbols-outlined">link</span> Copy link</button>
+          <button class="btn btn-primary modal-close-btn">Done</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-ai-writer">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3><span class="material-symbols-outlined ai-gradient-icon">auto_awesome</span> Help me write (Gemini AI)</h3>
+          <button class="icon-sm-btn modal-close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <textarea id="ai-prompt-input" rows="3" placeholder="Describe what you want to write or refine..."></textarea>
+          <div class="ai-quick-prompts">
+            <button class="chip-btn" data-ai="cover-letter">Draft Cover Letter</button>
+            <button class="chip-btn" data-ai="executive-summary">Executive Summary</button>
+            <button class="chip-btn" data-ai="fix-grammar">Fix Grammar</button>
+          </div>
+          <div class="ai-output-container" id="ai-output-container" style="display:none;">
+            <label>AI Draft:</label>
+            <div class="ai-output-box" id="ai-output-box" contenteditable="true"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" id="btn-ai-generate"><span class="material-symbols-outlined">auto_awesome</span> Generate</button>
+          <button class="btn btn-primary" id="btn-ai-insert" style="display:none;">Insert into Document</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-word-count">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3><span class="material-symbols-outlined">bar_chart</span> Word count statistics</h3>
+          <button class="icon-sm-btn modal-close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <table class="stats-table">
+            <tr><td>Pages</td><td id="stat-modal-pages">1</td></tr>
+            <tr><td>Words</td><td id="stat-modal-words">0</td></tr>
+            <tr><td>Characters</td><td id="stat-modal-chars">0</td></tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary modal-close-btn">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast-container" id="toast-container"></div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
